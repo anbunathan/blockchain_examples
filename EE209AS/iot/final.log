@@ -1,0 +1,139 @@
+INFO [02-09|23:05:18.236] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:05:18.252] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:05:18.252] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:05:18.362] Writing default main-net genesis block 
+INFO [02-09|23:05:19.201] Persisted trie from memory database      nodes=12356 size=1.88mB time=119.0016ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-09|23:05:19.202] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-09|23:05:19.203] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-09|23:05:19.203] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-09|23:05:19.203] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:05:19.261] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:05:19.261] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:05:19.261] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:05:19.262] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:05:19.397] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:05:19.399] New local node record                    seq=1 id=11201458c44cc621 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-09|23:05:19.399] Started P2P networking                   self="enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@127.0.0.1:30304?discport=0"
+INFO [02-09|23:45:18.496] Maximum peer count                       ETH=25 LES=0 total=25
+WARN [02-09|23:45:18.509] Found deprecated node list file D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json, please use the TOML config file instead. 
+ERROR[02-09|23:45:18.515] Can't load node list file: JSON syntax error at D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json:3: invalid character ']' looking for beginning of value 
+INFO [02-09|23:45:18.516] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:45:18.516] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:45:18.898] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-09|23:45:18.898] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-09|23:45:18.898] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-09|23:45:18.898] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:45:19.020] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:19.020] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:19.020] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:19.021] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:45:19.023] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:45:19.236] Blockchain manager stopped 
+INFO [02-09|23:45:19.237] Stopping Ethereum protocol 
+INFO [02-09|23:45:19.237] Ethereum protocol stopped 
+INFO [02-09|23:45:19.237] Transaction pool stopped 
+INFO [02-09|23:45:19.237] New local node record                    seq=2 id=11201458c44cc621 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-09|23:45:19.237] Started P2P networking                   self="enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@127.0.0.1:30304?discport=0"
+INFO [02-09|23:45:19.238] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata
+INFO [02-09|23:45:52.531] Maximum peer count                       ETH=25 LES=0 total=25
+WARN [02-09|23:45:52.544] Found deprecated node list file D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json, please use the TOML config file instead. 
+ERROR[02-09|23:45:52.544] Can't load node list file: JSON syntax error at D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json:3: invalid character ']' looking for beginning of value 
+INFO [02-09|23:45:52.546] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:45:52.546] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:45:52.767] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-09|23:45:52.767] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-09|23:45:52.767] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-09|23:45:52.767] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:45:52.871] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:52.872] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:52.872] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:45:52.873] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:45:52.874] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:45:53.067] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:45:53.070] New local node record                    seq=3 id=11201458c44cc621 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-09|23:45:53.070] Started P2P networking                   self="enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@127.0.0.1:30304?discport=0"
+INFO [02-09|23:46:22.864] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:46:22.864] Blockchain manager stopped 
+INFO [02-09|23:46:22.864] Stopping Ethereum protocol 
+INFO [02-09|23:46:22.864] Ethereum protocol stopped 
+INFO [02-09|23:46:22.864] Transaction pool stopped 
+INFO [02-09|23:46:22.865] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata
+INFO [02-09|23:48:24.991] Maximum peer count                       ETH=25 LES=0 total=25
+WARN [02-09|23:48:25.005] Found deprecated node list file D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json, please use the TOML config file instead. 
+ERROR[02-09|23:48:25.006] Can't load node list file: JSON syntax error at D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json:3: invalid character ']' looking for beginning of value 
+INFO [02-09|23:48:25.006] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:48:25.006] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:48:25.200] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-09|23:48:25.201] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-09|23:48:25.201] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-09|23:48:25.201] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:48:25.340] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:48:25.340] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:48:25.340] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:48:25.341] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:48:25.342] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:48:25.537] New local node record                    seq=4 id=11201458c44cc621 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-09|23:48:25.537] Started P2P networking                   self="enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@127.0.0.1:30304?discport=0"
+INFO [02-09|23:48:25.538] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:53:30.208] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:53:30.209] Blockchain manager stopped 
+INFO [02-09|23:53:30.209] Stopping Ethereum protocol 
+INFO [02-09|23:53:30.209] Ethereum protocol stopped 
+INFO [02-09|23:53:30.209] Transaction pool stopped 
+INFO [02-09|23:53:30.209] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata
+INFO [02-09|23:53:47.682] Maximum peer count                       ETH=25 LES=0 total=25
+WARN [02-09|23:53:47.694] Found deprecated node list file D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json, please use the TOML config file instead. 
+ERROR[02-09|23:53:47.695] Can't load node list file: JSON syntax error at D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json:3: invalid character ']' looking for beginning of value 
+INFO [02-09|23:53:47.695] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:53:47.695] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:53:47.915] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-09|23:53:47.915] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-09|23:53:47.915] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-09|23:53:47.916] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:53:48.038] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:53:48.038] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:53:48.038] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-09|23:53:48.039] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:53:48.041] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:53:48.351] New local node record                    seq=5 id=11201458c44cc621 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-09|23:53:48.351] Started P2P networking                   self="enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@127.0.0.1:30304?discport=0"
+^CINFO [02-10|23:27:26.114] Maximum peer count                       ETH=25 LES=0 total=25
+WARN [02-10|23:27:26.127] Found deprecated node list file D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json, please use the TOML config file instead. 
+ERROR[02-10|23:27:26.136] Can't load node list file: JSON syntax error at D:\trial\blockchain_examples\EE209AS\iot\final_9001\geth\static-nodes.json:3: invalid character ']' looking for beginning of value 
+INFO [02-10|23:27:26.136] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [02-10|23:27:26.137] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-10|23:27:26.500] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-10|23:27:26.500] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-10|23:27:26.500] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-10|23:27:26.501] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-10|23:27:26.606] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:27:26.606] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:27:26.606] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:27:26.606] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-10|23:27:26.609] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-10|23:27:26.896] New local node record                    seq=2 id=e666104df49c5e15 ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-10|23:27:26.896] Started P2P networking                   self="enode://9e39322b73e63d5b2af6d490c4a0059e0f47ecf950df894acbcdeabc5c2705643c21785839aa9e781b7e974312d2816ce038cd372a935370ac7d45ce3d8d151f@127.0.0.1:30304?discport=0"
+INFO [02-10|23:27:26.921] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-10|23:29:03.294] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-10|23:29:03.294] Blockchain manager stopped 
+INFO [02-10|23:29:03.294] Stopping Ethereum protocol 
+INFO [02-10|23:29:03.294] Ethereum protocol stopped 
+INFO [02-10|23:29:03.294] Transaction pool stopped 
+INFO [02-10|23:29:03.294] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata
+INFO [02-10|23:29:20.743] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-10|23:29:20.783] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [02-10|23:29:20.783] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\chaindata cache=512 handles=8192
+INFO [02-10|23:29:20.907] Writing default main-net genesis block 
+INFO [02-10|23:29:21.463] Persisted trie from memory database      nodes=12356 size=1.88mB time=123.014ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [02-10|23:29:21.464] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [02-10|23:29:21.464] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001\\geth\\ethash count=3
+INFO [02-10|23:29:21.464] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                      count=2
+INFO [02-10|23:29:21.464] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-10|23:29:21.493] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:29:21.493] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:29:21.493] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=51y10mo1w
+INFO [02-10|23:29:21.495] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-10|23:29:21.640] New local node record                    seq=1 id=fd68df6200eaa18b ip=127.0.0.1 udp=0 tcp=30304
+INFO [02-10|23:29:21.640] Started P2P networking                   self="enode://50f06cd2d7f1aad79544746d24c65eb9b69600f0349fb7d7aa9bd41bed4409f59a8e062c8caca1c5fd4e6ad951269deda53ac5f5eb65f5da4beab90fcad087ac@127.0.0.1:30304?discport=0"
+INFO [02-10|23:29:21.644] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+^C

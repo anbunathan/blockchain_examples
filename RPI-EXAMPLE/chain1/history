@@ -1,0 +1,10 @@
+
+personal.listAccounts
+miner.start(1)
+eth.blockNumber
+eth.getBalance(eth.codebase)
+eth.getBalance(eth.coinbase)
+eth.mining
+miner.stop()
+eth.mining
+eth.getBalance(eth.coinbase)

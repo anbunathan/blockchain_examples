@@ -1,0 +1,40 @@
+=============== Feb 11, 2021 (IST) ===============
+15:45:45.508065 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:45:45.577668 db@open opening
+15:45:45.578675 version@stat F·[] S·0B[] Sc·[]
+15:45:45.644093 db@janitor F·2 G·0
+15:45:45.644093 db@open done T·66.4244ms
+16:04:22.447788 db@close closing
+16:04:22.447788 db@close done T·0s
+=============== Feb 11, 2021 (IST) ===============
+16:04:25.813075 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:04:25.823093 version@stat F·[] S·0B[] Sc·[]
+16:04:25.823093 db@open opening
+16:04:25.823093 journal@recovery F·1
+16:04:25.823093 journal@recovery recovering @1
+16:04:25.920600 memdb@flush created L0@2 N·2 S·180B "n:\x15..seq,v2":"version,v1"
+16:04:25.921648 version@stat F·[1] S·180B[180B] Sc·[0.25]
+16:04:26.068601 db@janitor F·3 G·0
+16:04:26.068601 db@open done T·245.5085ms
+17:32:09.030052 db@close closing
+17:32:09.031053 db@close done T·1.0005ms
+=============== Feb 11, 2021 (IST) ===============
+17:32:12.075069 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:32:12.076071 version@stat F·[1] S·180B[180B] Sc·[0.25]
+17:32:12.076071 db@open opening
+17:32:12.076071 journal@recovery F·1
+17:32:12.076071 journal@recovery recovering @3
+17:32:12.145114 memdb@flush created L0@5 N·1 S·164B "n:\x15..seq,v4":"n:\x15..seq,v4"
+17:32:12.145114 version@stat F·[2] S·344B[344B] Sc·[0.50]
+17:32:12.262022 db@janitor F·4 G·0
+17:32:12.262022 db@open done T·185.9506ms
+=============== Feb 12, 2021 (IST) ===============
+00:15:14.575578 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:15:14.583670 version@stat F·[2] S·344B[344B] Sc·[0.50]
+00:15:14.583670 db@open opening
+00:15:14.583670 journal@recovery F·1
+00:15:14.583670 journal@recovery recovering @6
+00:15:14.643046 memdb@flush created L0@8 N·1 S·164B "n:\x15..seq,v6":"n:\x15..seq,v6"
+00:15:14.643046 version@stat F·[3] S·508B[508B] Sc·[0.75]
+00:15:14.775235 db@janitor F·5 G·0
+00:15:14.776215 db@open done T·191.5644ms

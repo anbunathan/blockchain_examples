@@ -1,0 +1,10 @@
+admin.nodeInfo
+personal.listAccounts
+admin.peers
+miner.start(1)
+eth.blockNumber
+eth.mining
+miner.stop()
+eth.mining
+eth.getBalance(eth.coinbase)
+miner.start(1)

@@ -1,0 +1,323 @@
+Instructions to run
+
+NODEJS and Scripts
+1. Install nodejs 8.9.4 and npm
+2. Pull or clone the github directory.
+	git clone https://github.com/yoojeenwoo/EE209AS.git
+3. In main project directory run cat package.json
+	a. Consult the "dependencies field"
+	b. These are the dependencies you will need to run the node scripts.
+	c. cd D:\trial\blockchain_examples\EE209AS
+	d. npm install
+	//c. npm install -S <packagename@x.y.z> where x,y,z make up the version of the package.
+ 
+
+GETH - This will show you how to connect the manufacturer and at least one miner to the blockchain
+The manufacturer is the only node that has been provided since it is the owner of the contract.
+1. Download Ethereum
+	https://geth.ethereum.org/downloads/
+	Download geth binary https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.8.23-c9427004.exe and install
+	(Make sure 64bit installer is downloaded)
+1.a. Create a new account 
+	cd C:\Program Files\Geth
+	C:\Program Files\Geth>>geth --datadir /ethereum_private2/tutorialchain account new
+1.b. The following account details will be displayed after selecting a password
+	account: 89b98b11f5f2e6e0023e101ccdec0b9ca8204ae0
+	passphrase: blockchain
+	Include the above account number in CustomGenesis.json
+
+2. Create a new directory (iot) - D:\trial\blockchain_examples\EE209AS\iot	
+
+3. Place the CustomGenesis.json file inside. 
+-------------------CustomGenesis.json
+{
+"config":{
+"chainid":124,
+"homesteadBlock":0,
+"eip150Block":0,
+"eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+},
+"difficulty":"400",
+"gasLimit": "210000000",
+"alloc":{
+"89b98b11f5f2e6e0023e101ccdec0b9ca8204ae0":{"balance":"300000"}
+}
+}
+----------------------------------
+
+4. Set up the first node - manufacturer node (Node 1)
+	A new cmd window with admin
+	cd D:\trial\blockchain_examples\EE209AS\iot
+	geth --datadir final_9001 init CustomGenesis.json
+	geth --datadir final_9001 --nodiscover --networkid 9001 --ipcdisable console
+	//Observe node1 is created
+	admin.nodeInfo
+	//this displays listener: 30303 (which is default port)
+	//the discovery port is ‘0’, since we set it to --nodiscover
+	//  enode: "enode://69873aad3bf2a7a281bbe87b61891a4e95388402ac00781e68484519d1e71261ce5a2574b4c1fcd00f358225df3cb68b6fbfebdbad6c17ba4ed8b5f9e214f286@127.0.0.1:30303?discport=0"
+
+5. Setup an account for node1, where the mined ethers will be collected
+	personal.newAccount()
+	//account="0x795e8b9750a05f81c814afd089dc114f588fae8a", password=blockchain
+	personal.listAccounts
+	//to display the list of accounts
+
+6. Set up the second node - miner node (Node 2)
+	A new cmd window with admin
+	cd D:\trial\blockchain_examples\EE209AS\iot
+	geth --datadir final_9001_2 init CustomGenesis.json
+	geth --datadir final_9001_2 --nodiscover --networkid 9001 --port 30304 console
+	//Observe node2 is created
+	admin.nodeInfo
+	//this displays listener: 30304 (which is default port)
+	//the discovery port is ‘0’, since we set it to --nodiscover
+	//    enode: "enode://6fae641dc1a532f9b9b3462ed51a648fb4c96d371e2efc7bbc7526c6de062988fe29ec34de0ee68518a4cd714094558b605e94bec3728590aac12fee6585b46c@127.0.0.1:30304?discport=0"
+
+7. Setup an account for node1, where the mined ethers will be collected
+	personal.newAccount()
+	//account="0x095a8a8942c0fbc4c6c49d03464626ca335e371b", password=blockchain
+	personal.listAccounts
+	//to display the list of accounts
+
+8. Connect the Nodes
+	admin.peers
+	//Observe empty array is displayed in both cmd windows
+	//Add node2 enode id to node1
+	//in node1 cmd window
+	admin.addPeer("enode://6fae641dc1a532f9b9b3462ed51a648fb4c96d371e2efc7bbc7526c6de062988fe29ec34de0ee68518a4cd714094558b605e94bec3728590aac12fee6585b46c@127.0.0.1:30304?discport=0")
+	admin.peers
+	//Observe peer information is displayed on both cmd windows
+[{
+    caps: ["eth/63"],
+    enode: "enode://6fae641dc1a532f9b9b3462ed51a648fb4c96d371e2efc7bbc7526c6de062988fe29ec34de0ee68518a4cd714094558b605e94bec3728590aac12fee6585b46c@127.0.0.1:30304?discport=0",
+    id: "15a97511be4512640635187129b81513d8076be088ca763016c8b442b4108082",
+    name: "Geth/v1.8.23-stable-c9427004/windows-amd64/go1.11.5",
+    network: {
+      inbound: false,
+      localAddress: "127.0.0.1:5156",
+      remoteAddress: "127.0.0.1:30304",
+      static: true,
+      trusted: false
+    },
+    protocols: {
+      eth: {
+        difficulty: 400,
+        head: "0x530aa31395f8b0d051b168cbed0b250825c716cc12ff4a405a0c2759c0034e2b",
+        version: 63
+      }
+    }
+}]
+
+9. Verify that you have a connected blockchain and a distributed database
+	//in node2 cmd widow
+	miner.start(1)
+	//observe mining is started in node 2
+	eth.blockNumber
+	//Observe number of blocks already added in node2
+	//in node1 cmd window
+	eth.blockNumber
+	//Observe more blocks are added in blockchain
+	//in both cmd windows
+	eth.getBlock(3)
+	//Observe the data is identical in both the windows
+	eth.mining
+	//Observe true
+	eth.getBalance(eth.coinbase)
+	//Observe the Ether added
+	miner.stop()
+	//Observe mining is stopped
+	eth.mining
+	//Observe false
+
+10. Repeat steps 6-9 for each additional miner you want to add to the network.
+
+11. Add enodes in static-nodes.json and then keep inside final_9001\geth and final_9001_2\geth
+
+12. Load the contract from the blockchain.
+	a. from geth terminal of manufacturer run "loadScript("loadSystem.js")"
+		i. should return "null"
+	b. call function "systemOnBC.owner()"
+		i. should return the manufacturer's address (160-bit/40-hex address)
+
+10. exit manufacturer window.
+11. in new terminal run: "geth --rpc --networkid 9001 --rpcaddr "127.0.0.1" --rpcport 30305 --rpccorsdomain "*" --rpcapi="db,eth,net,web3,personal,web3,miner" --nodiscover --port 30304 --datadir final_9001 2>> final.log"
+	a. This connects your manufacturer node and makes it available for rpc calls through the web3js rpcapi on your localhost on port 30305.
+	b. in another terminal, "tail -f final.log" to read from the log.
+12. See step 3d below first before continuing.
+13. If you would like to run miner nodes, run a command similar to step 11.
+	a. you must change to the correct directory.
+	b. you must use a different rpcport. you must use the same --port as the miner nodes you want to active.
+	c. Additionally, "run geth attach <dirname>/geth.ipc" to attach a console to the ipc instance.
+		i. you will able to run miner.start(1) and stop from here.
+
+Raspberry Pi's
+Setup your device clusters. I will assume you're using raspberry pi's. Make sure ssh is enabled
+1. To communicate the firmware file (version) from the pi to the computer, we used http requests as a quick way to get information across. You are welcome to use any method you feel comfortable with/require. I will describe our process below.
+2. On pi, download and install webpy
+3. scp over server.py from the project directory.
+4. chmod +x server.py to make executable.
+5. ifconfig to find your internal ip.
+6. server.py broadcasts the contents of "FIRMWARE.hex" over http (port 8080)
+	a. If you haven't already, create a file with hex digits inside called FIRMWARE.hex in the same directory as sever.py
+7. On your machine, configure minerInput.py with the correct ip address.
+8. Move on to next section, we'll run the script here later.
+
+Back to NodeJS and Scripts
+1. Generate a private/public key pair with openssl.
+	a. openssl req -new -x509 -days 365 -nodes -sha256 -out public.pem -keyout private.pem
+	b. remember where you generated them
+2. cd to the "Blockchain Project" directory.
+3. Make some changes specific to your experimental setup:
+  In manufacturer.js
+	a. if you used a different port or url for step 11 above, modify the web3 provider specification on line 20.
+	b. On line 43, modify the privateKey path string to yours.
+	c. on line 225, modify the path string for your hex file.
+	d. For ease while I was developing, I used the extended miner modules to mine directly from the manufacturer. If you would lke the miner nodes to do the mining, comment lines 257 and 262.
+		i. The end result is the same when you run, this is faster and involves less things you have to do.
+		ii. If you choose to use miner nodes to mine transactions, see step 13 above.
+  In miner.js
+  	a. see 3a. Line 23
+  	b. see 3b. For public key. Line 30
+  	c. Update the device_array with the ip address(es) of your connected pi's
+  	d. change the scp path on line 259 to reflect your project directory.
+  	e. change your pi ssh credentials, and modify your path to wherever you placed FIRMWARE.hex on your pis.
+  In minerInput.py
+  	a. configure with correct ip addresses.
+
+  NOTE: feel free to comment out any print statements if you deem them unnecessary.
+
+Putting it all together!
+Make sure all devices are running and all nodes are synced before proceeding.
+1. run "unlock.js" to unlock the manufacturer account, this allows you to push updates.
+2. run "./server.py" on all RBPi's 
+3. run "miner.js" and "minerInput.py"
+	a. This checks the blockchain for the most current firmware version.
+	b. Downloads it, checks the validity of the digital signature (if it came from the manufacturer)
+	c. checks firmware versions of devices specified.
+	d. overwrites modified or old firmware with new version.
+	e. aborts if signature couldn't be verified.
+4. edit your new firmware version file (originally firmware.hex) to whatever you want (must be hex digits, newlines, colons, no other characters)
+5. run "manufacturer.js"
+	a. reads the latest firmware version into the program.
+	b. digitally signs the firmware and appends it to the payload as a header.
+	c. The node then issues a signed transaction to the contract via the method pushUpdate(packagepp)
+	d. If you disabled the miner in this script and opted to have node miners, you must now switch windows to your attached miner node. and start mining there "miner.start(1)".
+	e. Observe how the firmware hex file changes on the contract, thereby changing on the RBPi's.
+	f. Run this file as many times as necessary.
+	g. stop the miner "miner.stop()".
+
+
+
+Troubleshoot
+Fatal: Error starting protocol stack: Access is denied
+solution
+https://ethereum.stackexchange.com/questions/10616/fatal-error-starting-protocol-stack-access-is-denied
+This occurs when you have another instance of geth already running. Use your Operating System's process handler to end the process if there are no visible windows.
+This happened to me when I started (and then closed) mist before I had set a private network running.
+
+admin.peers return [] windows 10
+solution
+https://www.edureka.co/community/10006/how-to-connect-peers-to-a-private-network-using-geth
+node1
+geth --identity "YourNodeName" --rpc --rpcport "8092" --datadir "DirectoryPathToStoreData" --port "30330" --nodiscover --rpcapi "db,eth,net,web3" --networkid 2010 init PathOfGenesisFile
+node2
+geth --identity "YourNodeName" --rpc --rpcport "8093" --datadir "DirectoryPathToStoreData" --port "30332" --nodiscover --rpcapi "db,eth,net,web3" --networkid 2010 init PathOfGenesisFile
+
+miner.start(1). runtime: out of memory: cannot allocate 2147483648-byte block (838205440 in use)
+solution
+https://github.com/ethereum/go-ethereum/issues/14633
+You will not be able to mine on a 32bit OS (or running a 32bit version of Geth). The ethash mining DAG requires more memory than the 32bit address space allows. Please use a 64bit machine, 64bit OS and 64bit verision of Geth if you wish to mine.
+
+in geth terminal,  loadScript is not working
+
+
+
+not required
+4. connect first node (manufacturer)
+	a. run: "geth --datadir ./final_9001 --networkid 9001 --port 30304 --nodiscover console 2>> final.log"
+	(D:\trial\blockchain_examples\EE209AS\iot>geth --datadir ./final_9001 --networkid 9001 --port 30304 --nodiscover console2>> final.log)
+5. Connect a miner node. In a separate terminal window, or on a different machine:
+	a. command window with admin previllage. cd D:\trial\blockchain_examples\EE209AS\iot. run: "geth --datadir ./final_9001_2 init genesis.json"
+	b. make sure you use the same genesis file.
+	c. run: "geth --datadir ./final_9001_2 --networkid 9001 --port 30306 --nodiscover console 2>> final1.log"
+	d. once logged in, run: "admin.nodeInfo.enode" and copy the output.
+	"enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+		NOTE: If you're on 2 different machines, find your internal ip address (ifconfig) and replace [::] with it. 
+6. On first terminal (manufacturer) run: "admin.addPeer(<paste copied enode url here>)" - "admin.addPeer("enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@192.168.0.10:30306")"
+Take enode URL for manufacturer from final.log
+On second terminal admin.addPeer("enode://efbc17aa4735343493a3b6a8711da18a3fcb373ff5aec531c1e4445a39deebee4d137aeab0febecf48e11a69221d03a9d8b4772f1fa53a9617a242eccafc7773@192.168.0.10:30304")
+	a. this should connect both peers to each other. run "admin.peers" to confirm.
+		This returns a json object with all present peers, you should see enode url under the field "id".
+	b. add the enode url to the static-nodes.json file under the final_9001 directory, and any other data directories you've created.
+
+not required
+4.cd D:\trial\blockchain_examples\EE209AS\iot
+in cmd window1 with admin
+geth --datadir ./final_9001 init CustomGenesis.json
+geth --datadir ./final_9001 --rpc --rpccorsdomain "localhost:3000" --rpcport 8545 -rpcapi "db,net,admin,web3,eth,personal,ssh,miner" --nodiscover -verbosity 6 --maxpeers 5 --networkid "124" --ipcdisable --port "30305"
+in cmd window2 with admin
+geth --rpc --rpcapi="db,eth,net,web3,personal,web3" attach "http://localhost:8545"
+in cmd window3 with admin
+geth --datadir ./final_9001_2 init CustomGenesis.json
+geth --identity "node2" --rpc --rpcport "8093" --datadir ./final_9001_2 --port "30306" --nodiscover --rpcapi "db,eth,net,web3" --ipcdisable --networkid "124" console
+
+5. add peer
+cmd window with admin. cd D:\trial\blockchain_examples\EE209AS\iot
+admin.addPeer("enode://abb23ecf6fddc4c863309c12258ef3048417578cd33a8ca00e6dc1783ac4208fc35e7d8998186865ea667aace530957d41bcdabeade16500f9b9a800794333c1@127.0.0.1:30306")
+add the enode url to the static-nodes.json file under the final_9001 directory, and any other data directories you've created.
+
+6. admin.peers
+[{
+    caps: ["eth/63"],
+    enode: "enode://abb23ecf6fddc4c863309c12258ef3048417578cd33a8ca00e6dc1783ac4208fc35e7d8998186865ea667aace530957d41bcdabeade16500f9b9a800794333c1@127.0.0.1:30306",
+    id: "8a766a2bd45d2be3663b71374aa87e5f2adeda2d16cbbd0f7d24f909e7005d85",
+    name: "Geth/node2/v1.8.23-stable-c9427004/windows-amd64/go1.11.5",
+    network: {
+      inbound: false,
+      localAddress: "127.0.0.1:2809",
+      remoteAddress: "127.0.0.1:30306",
+      static: true,
+      trusted: false
+    },
+    protocols: {
+      eth: {
+        difficulty: 400,
+        head: "0x530aa31395f8b0d051b168cbed0b250825c716cc12ff4a405a0c2759c0034e2b",
+        version: 63
+      }
+    }
+}]
+
+
+
+Working fine
+4.cd D:\trial\blockchain_examples\EE209AS\iot
+geth --identity "node1" --rpc --rpcport "8092" --datadir ./node1 --port "30330" --nodiscover --rpcapi "db,eth,net,web3" --networkid 2010 console
+geth --identity "node2" --rpc --rpcport "8093" --datadir ./node2 --port "30332" --nodiscover --rpcapi "db,eth,net,web3" --ipcdisable --networkid 2010 console
+
+5. add peer
+admin.addPeer("enode://037b23d8b863f53a311171c2466017ee4e4b6ed42441ca675fda25a55e6c65b5ecd462768bee74e49ece467c972d4ff8dd23a1fda4963734df67984c93aeb0b0@127.0.0.1:30330")
+admin.addPeer("enode://76cb0101cd2d02194a8017a25fe4458fbc0ff4dad535b6cc2cc7ed0b02a0906d3f095f3e29f37b5ff0dddafef3d3edda00d61c574f242542fff142d50b6851a9@127.0.0.1:30332")
+
+6. admin.peers
+[{
+    caps: ["eth/63"],
+    enode: "enode://037b23d8b863f53a311171c2466017ee4e4b6ed42441ca675fda25a55e6c65b5ecd462768bee74e49ece467c972d4ff8dd23
+a1fda4963734df67984c93aeb0b0@127.0.0.1:30330",
+    id: "20463650a9549158c01d4fa8dfeb752f3c12162ccae0ff61366b72f3f7088c78",
+    name: "Geth/node1/v1.8.23-stable-c9427004/windows-386/go1.11.5",
+    network: {
+      inbound: false,
+      localAddress: "127.0.0.1:52440",
+      remoteAddress: "127.0.0.1:30330",
+      static: true,
+      trusted: false
+    },
+    protocols: {
+      eth: {
+        difficulty: 17179869184,
+        head: "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3",
+        version: 63
+      }
+    }
+}]

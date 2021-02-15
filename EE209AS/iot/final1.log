@@ -1,0 +1,158 @@
+INFO [02-09|23:12:35.235] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:12:35.248] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:12:35.248] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:12:35.449] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:12:35.449] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:12:35.470] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:12:35.470] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:12:35.566] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:35.566] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:35.566] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:35.567] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:12:35.685] Blockchain manager stopped 
+INFO [02-09|23:12:35.685] Stopping Ethereum protocol 
+INFO [02-09|23:12:35.685] Ethereum protocol stopped 
+INFO [02-09|23:12:35.685] Transaction pool stopped 
+INFO [02-09|23:12:35.686] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-09|23:12:35.686] New local node record                    seq=1 id=1630452494cd7b0c ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:12:35.686] Started P2P networking                   self="enode://52f65e8d66f117ea6edff586229e90aeee221c02944e7978d11e4a74bcf14a9248b0dfe4a69426a2989ab6e893aa49aecf5ac5029ccc8cd8727b176455861f2f@127.0.0.1:30306?discport=0"
+INFO [02-09|23:12:56.985] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:12:56.998] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:12:56.998] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:12:57.170] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:12:57.170] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:12:57.170] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:12:57.170] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:12:57.271] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:57.271] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:57.271] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:12:57.272] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:12:57.274] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:12:57.497] New local node record                    seq=2 id=1630452494cd7b0c ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:12:57.497] Started P2P networking                   self="enode://52f65e8d66f117ea6edff586229e90aeee221c02944e7978d11e4a74bcf14a9248b0dfe4a69426a2989ab6e893aa49aecf5ac5029ccc8cd8727b176455861f2f@127.0.0.1:30306?discport=0"
+^CINFO [02-09|23:38:48.362] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:38:48.375] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:38:48.375] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:38:48.629] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:38:48.629] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:38:48.629] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:38:48.630] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:38:48.736] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:38:48.736] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:38:48.736] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:38:48.737] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:38:48.864] Blockchain manager stopped 
+INFO [02-09|23:38:48.864] Stopping Ethereum protocol 
+INFO [02-09|23:38:48.864] Ethereum protocol stopped 
+INFO [02-09|23:38:48.864] Transaction pool stopped 
+INFO [02-09|23:38:48.865] New local node record                    seq=1 id=90a78d6f8286bb30 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:38:48.865] Started P2P networking                   self="enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+INFO [02-09|23:38:48.865] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-09|23:41:29.668] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:41:29.683] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:41:29.683] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:41:29.892] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:41:29.892] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:41:29.892] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:41:29.893] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:41:29.999] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:41:29.999] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:41:29.999] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:41:30.000] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:41:30.002] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:41:30.216] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:41:30.218] New local node record                    seq=2 id=90a78d6f8286bb30 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:41:30.218] Started P2P networking                   self="enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+INFO [02-09|23:45:44.047] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:45:44.048] Blockchain manager stopped 
+INFO [02-09|23:45:44.048] Stopping Ethereum protocol 
+INFO [02-09|23:45:44.078] Ethereum protocol stopped 
+INFO [02-09|23:45:44.079] Transaction pool stopped 
+INFO [02-09|23:45:44.079] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-09|23:46:30.284] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:46:30.298] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:46:30.298] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:46:30.494] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:46:30.494] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:46:30.494] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:46:30.494] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:46:30.580] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:46:30.580] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:46:30.580] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:46:30.581] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:46:30.582] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:46:30.772] IPC endpoint opened                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:46:30.773] New local node record                    seq=3 id=90a78d6f8286bb30 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:46:30.773] Started P2P networking                   self="enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+INFO [02-09|23:47:18.880] IPC endpoint closed                      url=\\\\.\\pipe\\geth.ipc
+INFO [02-09|23:47:18.880] Blockchain manager stopped 
+INFO [02-09|23:47:18.880] Stopping Ethereum protocol 
+INFO [02-09|23:47:18.880] Ethereum protocol stopped 
+INFO [02-09|23:47:18.880] Transaction pool stopped 
+INFO [02-09|23:47:18.880] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-09|23:51:19.330] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:51:19.342] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:51:19.343] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:51:19.541] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:51:19.541] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:51:19.541] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:51:19.541] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:51:19.663] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:51:19.663] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:51:19.663] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:51:19.664] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:51:19.665] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:51:19.981] New local node record                    seq=4 id=90a78d6f8286bb30 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:51:19.981] Started P2P networking                   self="enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+INFO [02-09|23:51:19.994] Blockchain manager stopped 
+INFO [02-09|23:51:19.994] Stopping Ethereum protocol 
+INFO [02-09|23:51:19.994] Ethereum protocol stopped 
+INFO [02-09|23:51:19.994] Transaction pool stopped 
+INFO [02-09|23:51:19.995] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-09|23:54:26.598] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-09|23:54:26.610] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-386/go1.11.5
+INFO [02-09|23:54:26.610] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-09|23:54:26.918] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-09|23:54:26.918] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-09|23:54:26.918] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-09|23:54:26.919] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-09|23:54:27.024] Loaded most recent local header          number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:54:27.024] Loaded most recent local full block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:54:27.024] Loaded most recent local fast block      number=0 hash=5e70c0…0407c7 td=400 age=51y10mo1w
+INFO [02-09|23:54:27.026] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-09|23:54:27.027] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-09|23:54:27.229] New local node record                    seq=5 id=90a78d6f8286bb30 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-09|23:54:27.230] Started P2P networking                   self="enode://9db7d8399690d0698c1b772438fe34ddec38cd510e3605bb5efffb1c831c81aea5d9098c7f24ad55fd3a226206b23bf1c6e0b3972475f947f1e38109baa3e720@127.0.0.1:30306?discport=0"
+^CINFO [02-10|23:31:28.372] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-10|23:31:28.388] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [02-10|23:31:28.388] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-10|23:31:28.603] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-10|23:31:28.603] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-10|23:31:28.603] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-10|23:31:28.603] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-10|23:31:28.756] Loaded most recent local header          number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:28.756] Loaded most recent local full block      number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:28.756] Loaded most recent local fast block      number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:28.757] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-10|23:31:28.941] New local node record                    seq=1 id=240791cfff376c66 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-10|23:31:28.942] Started P2P networking                   self="enode://ed85549bdd26a7ac5d8981d6848e285971ce9436aba757c372b130685d5dc9cae878a0d5d8d32d37ba7c9d32eb659a60ee8c0d58d7f02b16b141e73f36082c8e@127.0.0.1:30306?discport=0"
+INFO [02-10|23:31:28.946] Blockchain manager stopped 
+INFO [02-10|23:31:28.946] Stopping Ethereum protocol 
+INFO [02-10|23:31:28.946] Ethereum protocol stopped 
+INFO [02-10|23:31:28.946] Transaction pool stopped 
+INFO [02-10|23:31:28.948] Database closed                          database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata
+INFO [02-10|23:31:48.738] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [02-10|23:31:48.753] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/windows-amd64/go1.11.5
+INFO [02-10|23:31:48.753] Allocated cache and file handles         database=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\chaindata cache=512 handles=8192
+INFO [02-10|23:31:48.949] Initialised chain configuration          config="{ChainID: 1997 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [02-10|23:31:48.949] Disk storage enabled for ethash caches   dir=D:\\trial\\blockchain_examples\\EE209AS\\iot\\final_9001_2\\geth\\ethash count=3
+INFO [02-10|23:31:48.949] Disk storage enabled for ethash DAGs     dir=C:\\Users\\natha\\AppData\\Ethash                                        count=2
+INFO [02-10|23:31:48.949] Initialising Ethereum protocol           versions="[63 62]" network=9001
+INFO [02-10|23:31:49.066] Loaded most recent local header          number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:49.066] Loaded most recent local full block      number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:49.066] Loaded most recent local fast block      number=0 hash=d8193f…cefd7e td=400 age=51y10mo1w
+INFO [02-10|23:31:49.067] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-10|23:31:49.069] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-10|23:31:49.315] New local node record                    seq=2 id=240791cfff376c66 ip=127.0.0.1 udp=0 tcp=30306
+INFO [02-10|23:31:49.315] Started P2P networking                   self="enode://ed85549bdd26a7ac5d8981d6848e285971ce9436aba757c372b130685d5dc9cae878a0d5d8d32d37ba7c9d32eb659a60ee8c0d58d7f02b16b141e73f36082c8e@127.0.0.1:30306?discport=0"
+^C
