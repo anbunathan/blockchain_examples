@@ -1,1 +1,1 @@
-module.exports = { networks: { development: { host: "localhost", port: 8042, network_id: "*" } } };
+module.exports = { networks: { development: { host: "localhost", port: 8042, network_id: "*", from: "0x4c6372e4bb1c50c4c572820095104333d751a36e",  gas: 20000000} } };

@@ -20,7 +20,7 @@ contract SmartToken {
         return true; 
     } 
     
-    function getTokens(address recipient) public returns (uint value) { 
+    function getTokens(address recipient) view public returns (uint value) { 
         return tokens[recipient]; 
     } 
 }
