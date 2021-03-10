@@ -1,6 +1,6 @@
 {
 "config":{
-"chainid":124,
+"chainid":1234,
 "homesteadBlock":0,
 "eip150Block":0,
 "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -8,6 +8,6 @@
 "difficulty":"400",
 "gasLimit": "210000000",
 "alloc":{
-"89b98b11f5f2e6e0023e101ccdec0b9ca8204ae0":{"balance":"300000"}
+"daf2854143c826c6af0664f2d03ff8dca4578858":{"balance":"300000"}
 }
 }

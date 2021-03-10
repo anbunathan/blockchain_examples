@@ -1,0 +1,8 @@
+# OSX documents
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Generated
+build/

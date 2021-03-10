@@ -1,0 +1,29 @@
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://maven.google.com" }
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'net.researchgate:gradle-release:2.4.0'
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.4.18"
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+    }
+}
+
+allprojects{
+    repositories{
+        jcenter()
+        maven { url "https://maven.google.com" }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

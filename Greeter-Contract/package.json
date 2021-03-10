@@ -1,0 +1,26 @@
+{
+  "name": "greeter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flatten": "cd ./node_modules/solidity-flattener && npm start ../../contracts/Greeter.sol --out ../../flattened"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EbenezerGH/Greeter-Contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EbenezerGH/Greeter-Contract/issues"
+  },
+  "homepage": "https://github.com/EbenezerGH/Greeter-Contract#readme",
+  "dependencies": {
+    "solidity-flattener": "git+https://github.com/poanetwork/solidity-flattener.git"
+  }
+}

@@ -1,0 +1,176 @@
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.util.zip.ZipFile
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    configurations {
+        javadocDeps
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+buildscript {
+    repositories {
+        //jcenter()
+        maven { url "https://jcenter.bintray.com" }
+        maven { url "http://repo1.maven.org/maven2" }
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+    }
+}
+
+dependencies {
+
+    ext.gethDep = 'org.ethereum:geth:1.6.7'
+    ext.googleDepsVersion = '25.1.0'
+
+    // For compilation
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.okio:okio:1.13.0' /* ByteString.decodeHex */
+
+    compileOnly "com.android.support:appcompat-v7:$googleDepsVersion"
+
+    // For compilation, but provided at runtime
+    // Configure also them for javadoc generation bellow
+    compileOnly gethDep
+
+    // For javadoc generation
+    javadocDeps gethDep
+
+    // For tests only
+    testCompile 'junit:junit:4.12'
+
+    // For integration tests only
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestCompile "com.android.support:support-annotations:$googleDepsVersion"
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile gethDep
+
+
+}
+
+//if (project.hasProperty("android")) { // Android libraries
+//    task sourcesJar(type: Jar) {
+//        classifier = 'sources'
+//        from android.sourceSets.main.java.srcDirs
+//    }
+//
+//    task javadoc(type: Javadoc) {
+//        source = android.sourceSets.main.java.srcDirs
+//        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//        classpath += configurations.compile
+//        classpath += configurations.javadocDeps
+//        afterEvaluate {
+//            // Wait after evaluation to add the android classpath
+//            // to avoid "buildToolsVersion is not specified" error
+//            classpath += files(android.getBootClasspath())
+//
+//            // Process AAR dependencies
+//            def aarDependencies = classpath.filter { it.name.endsWith('.aar') }
+//            classpath -= aarDependencies
+//            aarDependencies.each { aar ->
+//                // Extract classes.jar from the AAR dependency, and add it to the javadoc classpath
+//                def outputPath = "$buildDir/tmp/aarJar/${aar.name.replace('.aar', '.jar')}"
+//                classpath += files(outputPath)
+//
+//                // Use a task so the actual extraction only happens before the javadoc task is run
+//                dependsOn task(name: "extract ${aar.name}").doLast {
+//                    extractEntry(aar, 'classes.jar', outputPath)
+//                }
+//            }
+//        }
+//    }
+//} else { // Java libraries
+//    task sourcesJar(type: Jar, dependsOn: classes) {
+//        classifier = 'sources'
+//        from sourceSets.main.allSource
+//    }
+//}
+//
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//
+////// Utility method to extract only one entry in a zip file
+////private def extractEntry(archive, entryPath, outputPath) {
+////    if (!archive.exists()) {
+////        throw new GradleException("archive $archive not found")
+////    }
+////
+////    def path = Paths.get(outputPath)
+////    if (!Files.exists(path)) {
+////        def zip = new ZipFile(archive)
+////        zip.entries().each {
+////            if (it.name == entryPath) {
+////                Files.createDirectories(path.getParent())
+////                Files.copy(zip.getInputStream(it), path)
+////            }
+////        }
+////        zip.close()
+////    }
+////}
+//
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//
+//ext {
+//    bintrayRepo = 'ethmobile'
+//    bintrayName = 'ethdroid'
+//    bintrayOrg = 'sqli-nantes'
+//
+//    publishedGroupId = 'io.ethmobile'
+//    libraryName = 'ethdroid'
+//    artifact = 'ethdroid'
+//
+//    libraryDescription = 'Easy-to-use Ethereum Geth wrapper for Android'
+//
+//    siteUrl = 'http://ethmobile.io/ethdroid'
+//    gitUrl = 'https://github.com/ethmobile/ethdroid.git'
+//
+//    licenseName = 'The MIT License'
+//    licenseUrl = 'https://opensource.org/licenses/MIT'
+//    allLicenses = ["MIT"]
+//}
+//
+//apply from: 'install.gradle'
+//apply from: 'release.gradle'
+//apply from: 'snapshot.gradle'
