@@ -8,7 +8,7 @@ import java.math.BigInteger;
 
 public class Web3jConstants {
     //connection port
-    public static final String CLIENT_IP = "192.168.0.108";//"10.97.174.70";
+    public static final String CLIENT_IP = "192.168.0.105";//"10.97.174.70";
     public static final String CLIENT_PORT = "8545";
 
     // see https://www.reddit.com/r/ethereum/comments/5g8ia6/attention_miners_we_recommend_raising_gas_limit/

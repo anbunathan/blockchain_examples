@@ -17,11 +17,12 @@ import java.util.concurrent.TimeUnit
 const val MINIMUM_GAS_LIMIT = 21000
 const val PRIVATE_KEY_ROPSTEN = "914e0d54701284133143769df155e9c13d16a4ae82696457444c58d7442760d5" //todo: You have to create an ethereum account on the Ropsten network (in metamask) and put your private key here
 //const val ROPSTEN_INFURA_URL = "https://rinkeby.infura.io/v3/ff788aca525342818fa643b0e2e99040" //todo: You have to register on the Infura website and put your api key here
+const val ROPSTEN_INFURA_URL = "https://rinkeby.infura.io/v3/90048e116b0d4356a77cf4e3c7d78343"
 const val CONTRACT_ADDRESS = "0x33B27EC0BE04B7ab4069F3b46Daa2d83516B4007"
 
 //        const val PRIVATE_KEY_ROPSTEN = Credentials.create("f9319fe162c31947c0ca8fd649a536b7ca311b5f210afdc48b62fd7d18ce53e4")
 //        const val CONTRACT_ADDRESS = "0x8394cDf176A4A52DA5889f7a99c4f7AD2BF59088"
-const val ROPSTEN_INFURA_URL = "https://rinkeby.infura.io/v3/01eb8f7b5e514832af8e827c23784d23"
+//const val ROPSTEN_INFURA_URL = "https://rinkeby.infura.io/v3/01eb8f7b5e514832af8e827c23784d23"
 
 class MainActivity : AppCompatActivity() {
 
