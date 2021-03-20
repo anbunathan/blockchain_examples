@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/EbenezerGH/Greeter-Contract#readme",
   "dependencies": {
+    "solc": "^0.4.15",
     "solidity-flattener": "git+https://github.com/poanetwork/solidity-flattener.git"
   }
 }
