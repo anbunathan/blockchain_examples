@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.gesture;
+package org.tensorflow.lite.examples.face;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -69,7 +69,6 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -86,8 +85,13 @@ import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.web3j.protocol.http.HttpService;
+import org.web3j.tx.ChainId;
+import org.web3j.tx.RawTransactionManager;
+import org.web3j.tx.TransactionManager;
+import org.web3j.tx.gas.ContractGasProvider;
+import org.web3j.tx.gas.DefaultGasProvider;
+
 import java.math.BigInteger;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 //import org.eclipse.paho.android.service.MqttAndroidClient;
@@ -113,10 +117,10 @@ public class Camera2BasicFragment extends Fragment
 
   private static final int PERMISSIONS_REQUEST_CODE = 1;
 
-  private static String geth_url = "http://35.247.47.68:8042";
-  private static String CONTRACT_ADDRESS = "0x0ce678aa4dabef4627fd351deeb35889e6c3d246";
-  private static String PRIVATE_KEY_GETH = "0x57fbf0ad60b682272423afa3c5bd9ed9c459cbf5af3c6f074594ba386ec37428";
-  private static String recipient = "0xe6f8bbc22d6ef8cb0991e1a27d9909c92422c119";
+  private static String geth_url = "http://192.168.0.150:8042";
+  private static String CONTRACT_ADDRESS = "0xa5c53be143769d625c1185cc67c705f039a1f876";
+  private static String PRIVATE_KEY_GETH = "0x51f3dcb980c734f39f6d4dd001e3edb8c3c3da80691d62806c12369de09f7adb";
+  private static String recipient = "0x8f87dbf765be30e1bc65361c99252cd33b67bd0d";
   private static Web3j web3j = null;
   private static Credentials credentials = Credentials.create(PRIVATE_KEY_GETH);
 
@@ -479,14 +483,18 @@ public class Camera2BasicFragment extends Fragment
     int tokens = (existingTokens).intValue();
     if(tokens>0) {
       try {
-        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+        TransactionManager transactionManager = new RawTransactionManager(
+                web3j, credentials, ChainId.KOVAN);
+        ContractGasProvider contractGasProvider = new DefaultGasProvider();
+//        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, transactionManager, contractGasProvider);
         transactionReceipt = greeter.withdrawToken(recipient, tokentowithdraw).sendAsync().get(3, TimeUnit.MINUTES);
         result = "Successful transaction. Gas used: " + transactionReceipt.getGasUsed();
-        Log.e("amlan", "Successful transaction. Gas used: " + transactionReceipt.getGasUsed());
+        Log.e("smart", "Successful transaction. Gas used: " + transactionReceipt.getGasUsed());
       } catch (Exception e) {
         e.printStackTrace();
         result = "Error during transaction. Error " + e.getMessage();
-        Log.e("amlan", "Error in withdrawFromContract. Error " + e.getMessage());
+        Log.e("smart", "Error in withdrawFromContract. Error " + e.getMessage());
       }
     }
     return result;
@@ -501,14 +509,18 @@ public class Camera2BasicFragment extends Fragment
     int tokens = (existingTokens).intValue();
     if(tokens==0){
       try {
-        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+        TransactionManager transactionManager = new RawTransactionManager(
+                web3j, credentials, ChainId.KOVAN);
+        ContractGasProvider contractGasProvider = new DefaultGasProvider();
+//        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, transactionManager, contractGasProvider);
         transactionReceipt = greeter.depositToken(recipient, tokentodeposit).sendAsync().get(3, TimeUnit.MINUTES);
         result = "Successful transaction. Gas used: "+transactionReceipt.getGasUsed();
-        Log.e("amlan", "Successful transaction. Gas used: " + transactionReceipt.getGasUsed());
+        Log.e("smart", "Successful transaction. Gas used: " + transactionReceipt.getGasUsed());
       } catch(Exception e){
         e.printStackTrace();
         result = "Error during transaction. Error "+e.getMessage();
-        Log.e("amlan", "Error in depositToContract. Error " + e.getMessage());
+        Log.e("smart", "Error in depositToContract. Error " + e.getMessage());
       }
     }    
     return result;
@@ -518,14 +530,18 @@ public class Camera2BasicFragment extends Fragment
     String result;
     BigInteger tokens = null;
     try {
-      SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+      TransactionManager transactionManager = new RawTransactionManager(
+              web3j, credentials, ChainId.KOVAN);
+      ContractGasProvider contractGasProvider = new DefaultGasProvider();
+//      SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
+      SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, transactionManager, contractGasProvider);
       tokens = greeter.getTokens(recipient).sendAsync().get(3, TimeUnit.MINUTES);
       result = "Tokens in contract: "+tokens;
-      Log.e("amlan", "Tokens in contract: " + tokens);
+      Log.e("smart", "Tokens in contract: " + tokens);
     } catch(Exception e){
       e.printStackTrace();
       result = "Error during transaction. Error "+e.getMessage();
-      Log.e("amlan", "Error in getTokens. Error " + e.getMessage());
+      Log.e("smart", "Error in getTokens. Error " + e.getMessage());
     }
     return tokens;
   }

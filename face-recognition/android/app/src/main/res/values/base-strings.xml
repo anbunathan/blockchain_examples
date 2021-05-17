@@ -16,7 +16,7 @@
 -->
 
 <resources>
-    <string name="app_name">TFL Gesture</string>
+    <string name="app_name">Face Recog BC</string>
     <string name="intro_message">
         <![CDATA[
 

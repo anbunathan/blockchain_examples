@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-package org.tensorflow.lite.examples.gesture;
+package org.tensorflow.lite.examples.face;
 
 import android.content.Context;
 import android.util.AttributeSet;

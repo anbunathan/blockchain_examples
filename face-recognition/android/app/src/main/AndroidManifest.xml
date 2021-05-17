@@ -17,7 +17,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.tensorflow.lite.examples.gesture">
+    package="org.tensorflow.lite.examples.face">
     <uses-sdk />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -34,7 +34,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:theme="@style/MaterialTheme">
 
-        <activity android:name="org.tensorflow.lite.examples.gesture.CameraActivity"
+        <activity android:name="org.tensorflow.lite.examples.face.CameraActivity"
                   android:screenOrientation="portrait"
                   android:label="@string/app_name">
             <intent-filter>

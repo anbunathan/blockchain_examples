@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.gesture;
+package org.tensorflow.lite.examples.face;
 
 import org.web3j.abi.EventEncoder;
 import org.web3j.abi.TypeReference;
