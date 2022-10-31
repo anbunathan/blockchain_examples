@@ -8,7 +8,7 @@
 const char* ssid = "TP-Link_8700";
 const char* password = "iotapp8266";
 
-const char* mqtt_server = "digitran-mqtt.tk";
+const char* mqtt_server = "sphinx-mqtt.tk";
 
 //// DHT11 Sensor Data Pin
 //#define DHTPIN    D5

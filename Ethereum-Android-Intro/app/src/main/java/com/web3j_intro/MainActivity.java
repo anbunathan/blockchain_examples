@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             Credentials credentials = WalletUtils.loadCredentials(password, walletDir);
 //            Toast.makeText(this, "Your address is " + credentials.getAddress(), Toast.LENGTH_LONG).show();
 //            Log.d("wat", credentials.getAddress());
-            TransactionReceipt receipt = Transfer.sendFunds(web3,credentials,"0x3bf5dac66440554c5c2cD4a6DFd639B09aF0511f",new BigDecimal(1000),Convert.Unit.WEI).sendAsync().get();
+            TransactionReceipt receipt = Transfer.sendFunds(web3,credentials,"0x73791D42DDb207330009e8641CA27c6CA45C973D",new BigDecimal(1000),Convert.Unit.WEI).sendAsync().get();
 
 //            TransactionReceipt receipt = Transfer.sendFunds(web3,credentials,"0x31B98D14007bDEe637298086988A0bBd31184523",new BigDecimal(1),Convert.Unit.ETHER).sendAsync().get();
 //            toastAsync("Transaction complete: " +receipt.getTransactionHash());

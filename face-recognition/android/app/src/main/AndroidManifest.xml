@@ -16,6 +16,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:targetSandboxVersion="1"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.tensorflow.lite.examples.face">
     <uses-sdk />
@@ -33,6 +34,8 @@
         android:icon="@drawable/ic_launcher"
         tools:ignore="GoogleAppIndexingWarning"
         android:theme="@style/MaterialTheme">
+        android:usesCleartextTraffic="true">
+        android:networkSecurityConfig="@xml/network_security_config"
 
         <activity android:name="org.tensorflow.lite.examples.face.CameraActivity"
                   android:screenOrientation="portrait"

@@ -117,10 +117,10 @@ public class Camera2BasicFragment extends Fragment
 
   private static final int PERMISSIONS_REQUEST_CODE = 1;
 
-  private static String geth_url = "http://192.168.0.150:8042";
-  private static String CONTRACT_ADDRESS = "0xa5c53be143769d625c1185cc67c705f039a1f876";
-  private static String PRIVATE_KEY_GETH = "0x51f3dcb980c734f39f6d4dd001e3edb8c3c3da80691d62806c12369de09f7adb";
-  private static String recipient = "0x8f87dbf765be30e1bc65361c99252cd33b67bd0d";
+  private static String geth_url = "http://34.125.91.5:8042";
+  private static String CONTRACT_ADDRESS = "0xa1c03fadfd64c7b141e82b64e1bedbc6cdbf892f";
+  private static String PRIVATE_KEY_GETH = "0xd70701316dd3234e81299ac22a34f413f4d54281932890454bec7f4fc76c8bf7";
+  private static String recipient = "0xb00151840380353a707c09ae585219d150e50278";
   private static Web3j web3j = null;
   private static Credentials credentials = Credentials.create(PRIVATE_KEY_GETH);
 
@@ -455,11 +455,11 @@ public class Camera2BasicFragment extends Fragment
       HttpService gethHttpService = new HttpService(geth_url);
       web3j = Web3j.build(gethHttpService);
       result = "web3j is successfully initialized";
-      Log.e("amlan", "web3j is successfully initialized...");
+      Log.e("smart", "web3j is successfully initialized...");
     }catch(Exception e){
       e.printStackTrace();
       result =  "Error initializing web3j/infura";
-      Log.e("amlan", "Error in web3j initialization!!!");
+      Log.e("smart", "Error in web3j initialization!!!");
     }
     return result;
   }
@@ -514,7 +514,7 @@ public class Camera2BasicFragment extends Fragment
         ContractGasProvider contractGasProvider = new DefaultGasProvider();
 //        SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, credentials, getGasPrice(), getGasLimit());
         SmartToken_sol_SmartToken greeter = SmartToken_sol_SmartToken.load(CONTRACT_ADDRESS, web3j, transactionManager, contractGasProvider);
-        transactionReceipt = greeter.depositToken(recipient, tokentodeposit).sendAsync().get(3, TimeUnit.MINUTES);
+        transactionReceipt = greeter.depositToken(recipient, tokentodeposit).sendAsync().get(10, TimeUnit.MINUTES);
         result = "Successful transaction. Gas used: "+transactionReceipt.getGasUsed();
         Log.e("smart", "Successful transaction. Gas used: " + transactionReceipt.getGasUsed());
       } catch(Exception e){
@@ -1144,7 +1144,7 @@ public class Camera2BasicFragment extends Fragment
               allowStateChange = true;
               stateChanged = false;
             }
-          }, 10000);
+          }, 1000);
         }catch(Exception e){
           e.printStackTrace();
         }
