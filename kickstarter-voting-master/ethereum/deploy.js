@@ -5,10 +5,10 @@ const compiledFactory = require("./build/CampaignFactory.json");
 const provider = new HDWalletProvider(
 
   // Replace with your recovery phrase from metamask
-  "pen lumber couch inmate defy pupil neglect river mind sweet visa art",
+  "cause bread climb spawn street mammal service until ripple cigar fence camera",
 
   // Replace with your API endpoint from infura
-  "wss://rinkeby.infura.io/ws/v3/0f940dbce5a94f79878c957017f5c9a4"
+  "wss://goerli.infura.io/ws/v3/90048e116b0d4356a77cf4e3c7d78343"
 );
 const web3 = new Web3(provider);
 

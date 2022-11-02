@@ -11,7 +11,9 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   const provider = new Web3.providers.HttpProvider(
 
     // Do not change this
-    "https://rinkeby.infura.io/v3/15c1d32581894b88a92d8d9e519e476c"
+    //"https://rinkeby.infura.io/v3/15c1d32581894b88a92d8d9e519e476c"
+    "https://goerli.infura.io/v3/15c1d32581894b88a92d8d9e519e476c"
+   
   );
   web3 = new Web3(provider);
 }
